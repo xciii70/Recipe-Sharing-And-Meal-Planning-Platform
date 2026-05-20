@@ -1,13 +1,31 @@
-# Recipe-Sharing-And-Meal-Planning-Platform
+# Recipe-Sharing-Platform
 
 ## Project Description
-This project is a lightweight, community-driven web application designed for sharing home recipes and planning daily meals. Built entirely using **native PHP** without any external frameworks, the system focuses heavily on fundamental web structures, robust application logic, and secure server-side CRUD manipulation. 
+This project is a lightweight, community-driven web application designed for sharing home recipes. Built entirely using **native PHP** without any external frameworks, the system focuses heavily on fundamental web structures, server-side rendering (SSR), and secure CRUD manipulation to strictly limit client-side scripting. 
 
-The application is specifically optimized to run efficiently on a hardware-constrained **Raspberry Pi Zero 2W** environment using link-local networking. It implements a strict **3rd Normal Form (3NF)** relational database structure (MariaDB/PostgreSQL) to handle intricate data normalization, including many-to-many relationships between recipes and ingredients.
+The application is specifically optimized to run efficiently on a hardware-constrained **Raspberry Pi Zero 2W** environment using link-local networking (WiFi WAN off for demo). It implements an integrated in-app page for member introductions and a streamlined **3rd Normal Form (3NF)** relational database structure (MariaDB/PostgreSQL) optimized for low memory overhead.
 
 ## Tech Stack & Runtime
 - **Hardware Platform:** Raspberry Pi Zero 2W
 - **Web Server:** HTTP Server (Apache/Nginx)
-- **Backend Scripting:** Native PHP Engine
-- **Database:** MariaDB / PostgreSQL (3NF Schema)
+- **Backend Scripting:** Native PHP Engine (Server-Side Rendering)
+- **Database:** MariaDB / PostgreSQL (3NF Schema, `utf8mb4` encoding)
 - **Network Configuration:** Link-local networking (WiFi off for demo)
+
+## Repository File Structure
+- `db_connect.php` - Database connection configuration.
+- `login.php` - User authentication page.
+- `index.php` - Home dashboard showing the recipe directory.
+- `recipe_detail.php` - Single recipe detailed view panel.
+- `add_recipe.php` - Input form interface for new recipes.
+- `insert_recipe.php` - Server-side data processing and insertion logic.
+- `members.php` - Integrated team profile presentation page.
+- `database.sql` - Exported MariaDB database creation schema.
+
+## Project Documentation
+Please refer to the following mandatory files for full configurations:
+- `README.md` - Project description.
+- `Contributors.md` - List of the members.
+- `Installation.md` - Setup and deployment instructions for verification.
+- `UserGuide.md` - Instructions on how to use the application.
+- `AdminGuide.md` - Guidelines to configure and maintain the application.
