@@ -15,12 +15,14 @@ The application is specifically optimized to run efficiently on a hardware-const
 ## Repository File Structure
 - `db_connect.php` - Database connection configuration.
 - `login.php` - User authentication page.
+- `logout.php` - user exit page.
 - `index.php` - Home dashboard showing the recipe directory.
 - `recipes_detail.php` - Single recipe detailed view panel.
 - `add_recipes.html` - User interface for the add function.
 - `add_recipes.php` - Server-side data processing and insertion logic.
 - `delete_recipes_html` - User interface for the delete function.
-- `delete_recipes_php` - Backend side for delete function. 
+- `delete_recipes_php` - Backend side for delete function.
+- `style.css` - style for user interface along side html. 
 - `members.php` - Integrated team profile presentation page.
 - `database.sql` - Exported MariaDB database creation schema.
 
