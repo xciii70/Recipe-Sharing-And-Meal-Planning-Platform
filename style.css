@@ -176,7 +176,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; 
+	height:100vh;
+    max-height: 100vh; 
     width: 100%;
 }
 
@@ -191,7 +192,7 @@ h1 {
 /* 3. LOGO block style and spacing */
 .authentication-brand {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 
 	position: relative;
     left: -12px;
@@ -199,7 +200,7 @@ h1 {
 
 .authentication-logo {
     font-family: "Marker Felt", fantasy;
-    font-size: 48px;
+    font-size: 43px;
     color: black;
     margin-top: 20px;
 }
@@ -217,37 +218,38 @@ h1 {
 .authentication-container {
     background-color: #CAC6BD;
     border-radius: 15px;
-    padding: 25px 30px;
-    width: 400px;
+    padding: 20px 30px;
+	width: 300px;
     margin: 0 auto;
+	margin-bottom: 20px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
 
 .authentication-title {
-    font-size: 40px; 
+    font-size: 28px; 
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1px;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .form-group label {
     display: block;
     font-weight: 600;
-    margin-bottom: 8px;
-    font-size: 16px;
+    margin-bottom: 2px;
+    font-size: 14px;
 }
 
 /* Input box */
 .form-group input {
     width: 100%;
-	padding: 10px;
+	padding: 8px 10px;
     border: 0px; 
-    border-radius: 8px;
+    border-radius: 6px;
     background-color: #F3EFDD; 
-    font-size: 16px;
+    font-size: 14px;
     font-family: Arial, sans-serif;
 }
 
@@ -257,15 +259,15 @@ h1 {
 /* Login/Register button */
 .btn-authentication {
     width: 100%;
-    padding: 12px;
+    padding:  8px;
     background-color: black;
     color: #F3EFDD;
     border: none;
-    border-radius: 8px;
-    font-size: 18px;
+    border-radius: 6px;
+    font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 8px;
     transition: transform 0.1s;
 }
 
@@ -280,8 +282,8 @@ h1 {
 /* Switch prompt words */
 .authentication-switch {
     text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 12px;
 }
 
 .authentication-switch a {
