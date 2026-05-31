@@ -3,11 +3,13 @@ session_start();
 
 include 'db_connect.php';
 
+$error_message = ""; 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $sql = "SELECT * FROM members 
-            WHERE username = '$username'";
+    
+    $sql = "SELECT * FROM members WHERE username = '$username'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -18,35 +20,55 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: index.php");
             exit();
         } else {
-            echo "Wrong password.";
+            $error_message = "Wrong password."; 
         }
     } else {
-        echo "User not found.";
+        $error_message = "User not found."; 
     }
 }
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="English">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Login</title>
+    <title>Kitchenary - Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <h1>Login</h1>
-    <form method="POST">
+<body class="authentication-body">
+<div class="authentication-wrapper">
 
-        <label>Username</label><br>
-        <input type="text" name="username" required><br><br>
+		<div class="authentication-brand">
+            <div class="authentication-logo">🍳 Kitchenary</div>
+            <p class="authentication-subtitle">Cook the World Your Way!</p>
+        </div>
+    <div class="authentication-container">
+        <h1 class="authentication-title">Login</h1>
+        
+        <?php if (!empty($error_message)): ?>
+            <p style="color: #ff6b6b; text-align: center; margin-bottom: 15px; font-weight: bold;">
+                <?php echo $error_message; ?>
+            </p>
+        <?php endif; ?>
 
-        <label>Password</label><br>
-        <input type="password" name="password" required><br><br>
+        <form method="POST">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" required placeholder="Enter username">
+            </div>
 
-        <button type="submit">Login</button>
-    </form>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" required placeholder="Enter password">
+            </div>
 
-</body>
+            <button type="submit" class="btn-authentication">Login</button>
+        </form>
+
+        <p class="authentication-switch">Don't have an account? <a href="register.php">Sign Up</a></p>
+    </div>
+
+</div></body>
 </html>
